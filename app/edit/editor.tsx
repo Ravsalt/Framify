@@ -5,11 +5,10 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useFiltersStore } from "@/providers/filters-store-provider";
 import { useImagesStore } from "@/providers/images-store-provider";
-import Image from "next/image";
 import Link from "next/link";
 import { Filters } from "./filters";
-import html2canvas from "html2canvas";
 import { Camera, Download } from "lucide-react";
+import domtoimage from "dom-to-image";
 import { Preview } from "./preview";
 import { AxolotlStickers } from "./axolotl-stickers";
 import { CatStickers } from "./cat-stickers";
@@ -29,7 +28,6 @@ export const Editor = () => {
   const downloadImage = async () => {
     if (!elementRef.current) return;
 
-    // Add loading indicator
     const loadingIndicator = document.createElement("div");
     loadingIndicator.textContent = "Generating image...";
     loadingIndicator.style.position = "fixed";
@@ -44,32 +42,13 @@ export const Editor = () => {
     document.body.appendChild(loadingIndicator);
 
     try {
-      // Make sure all fonts are loaded
       await document.fonts.ready;
 
-      // Make sure all images are loaded
-      const images = elementRef.current.querySelectorAll("img");
-      await Promise.all(
-        Array.from(images).map((img) => {
-          if (img.complete) return Promise.resolve();
-          return new Promise((resolve) => {
-            img.onload = resolve;
-            img.onerror = resolve; // Continue even if image fails
-            // Set a timeout to resolve after 3 seconds regardless
-            setTimeout(resolve, 3000);
-          });
-        }),
-      );
-
-      const canvas = await html2canvas(elementRef.current, {
-        backgroundColor: background,
-        scale: 2,
-        useCORS: true,
+      const dataUrl = await domtoimage.toPng(elementRef.current, {
+        bgcolor: background,
+        quality: 1,
       });
 
-      const dataUrl = canvas.toDataURL("image/png");
-
-      // Create download link
       const link = document.createElement("a");
       link.download = "framify-photostrip.png";
       link.href = dataUrl;
@@ -84,7 +63,6 @@ export const Editor = () => {
         "Failed to generate image. Please refresh your page or use a different browser.",
       );
     } finally {
-      // Remove loading indicator
       document.body.removeChild(loadingIndicator);
     }
   };
@@ -120,9 +98,9 @@ export const Editor = () => {
           >
             {images.slice(0, 3).map((image, index) => (
               <div key={index} className="relative h-[180px] w-[240px]">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={image}
-                  fill
                   alt=""
                   className={cn(
                     "absolute mx-auto h-full w-full rounded object-cover",
