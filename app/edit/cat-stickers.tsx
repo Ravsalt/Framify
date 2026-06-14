@@ -12,7 +12,6 @@ import cat8 from "@/public/cat-stickers/sad.svg";
 import cat9 from "@/public/cat-stickers/sing.svg";
 import cat10 from "@/public/cat-stickers/yes.svg";
 
-import Image from "next/image";
 
 export const CatStickers = () => {
   const { images } = useImagesStore((store) => store);
@@ -21,27 +20,27 @@ export const CatStickers = () => {
   const isLessThanThreeImages = images.length < 3;
   return (
     <div>
-      <Image src={cat1} alt="" className="absolute top-4 w-12" />
-      <Image src={cat2} alt="" className="absolute top-20 right-6 w-12" />
-      <Image src={cat3} alt="" className="absolute top-40 left-6 w-12" />
+      <img src={cat1.src} alt="" className="absolute top-4 w-12" />
+      <img src={cat2.src} alt="" className="absolute top-20 right-6 w-12" />
+      <img src={cat3.src} alt="" className="absolute top-40 left-6 w-12" />
       {!isLessThanTwoImages && (
-        <Image src={cat4} alt="" className="absolute top-60 right-6 w-12" />
+        <img src={cat4.src} alt="" className="absolute top-60 right-6 w-12" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={cat5} alt="" className="absolute top-80 left-6 w-12" />
+        <img src={cat5.src} alt="" className="absolute top-80 left-6 w-12" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={cat6} alt="" className="absolute top-96 left-32 w-12" />
+        <img src={cat6.src} alt="" className="absolute top-96 left-32 w-12" />
       )}
       {!isLessThanThreeImages && (
-        <Image src={cat7} alt="" className="absolute right-6 bottom-56 w-12" />
+        <img src={cat7.src} alt="" className="absolute right-6 bottom-56 w-12" />
       )}
       {!isLessThanThreeImages && (
-        <Image src={cat8} alt="" className="absolute bottom-36 left-6 w-12" />
+        <img src={cat8.src} alt="" className="absolute bottom-36 left-6 w-12" />
       )}
-      <Image src={cat9} alt="" className="absolute right-6 bottom-18 w-12" />
+      <img src={cat9.src} alt="" className="absolute right-6 bottom-18 w-12" />
       {!isLessThanTwoImages && (
-        <Image src={cat10} alt="" className="absolute bottom-8 left-6 w-12" />
+        <img src={cat10.src} alt="" className="absolute bottom-8 left-6 w-12" />
       )}
     </div>
   );

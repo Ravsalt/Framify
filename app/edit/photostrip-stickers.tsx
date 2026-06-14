@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
 import axolotlIcon from "@/public/axolotl-stickers/happy.svg";
 import catIcon from "@/public/cat-stickers/eat.svg";
@@ -28,7 +27,8 @@ export const PhotostripStickers = () => {
           stickers === "axolotl" && "border-2 border-primary"
         )}
       >
-        <Image src={axolotlIcon} alt="" className="w-10" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={axolotlIcon.src} alt="" className="w-10" />
         <span className="sr-only">Axolotl stickers</span>
       </Button>
       <Button
@@ -39,7 +39,8 @@ export const PhotostripStickers = () => {
           stickers === "cat" && "border-2 border-primary"
         )}
       >
-        <Image src={catIcon} alt="" className="w-10" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={catIcon.src} alt="" className="w-10" />
         <span className="sr-only">Cat stickers</span>
       </Button>
       <Button
@@ -50,7 +51,8 @@ export const PhotostripStickers = () => {
           stickers === "panda" && "border-2 border-primary"
         )}
       >
-        <Image src={pandaIcon} alt="" className="w-10" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={pandaIcon.src} alt="" className="w-10" />
         <span className="sr-only">Panda stickers</span>
       </Button>
       <Button
@@ -61,7 +63,8 @@ export const PhotostripStickers = () => {
           stickers === "zhongli" && "border-2 border-primary"
         )}
       >
-        <Image src={zhongliIcon} alt="" className="w-12" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={zhongliIcon.src} alt="" className="w-12" />
         <span className="sr-only">Zhongli stickers</span>
       </Button>
       <Button
@@ -72,7 +75,8 @@ export const PhotostripStickers = () => {
           stickers === "jet" && "border-2 border-primary"
         )}
       >
-        <Image src={jetIcon} alt="" className="w-12" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={jetIcon.src} alt="" className="w-12" />
         <span className="sr-only">Jet stickers</span>
       </Button>
       <Button
@@ -83,7 +87,8 @@ export const PhotostripStickers = () => {
           stickers === "sage" && "border-2 border-primary"
         )}
       >
-        <Image src={sageIcon} alt="" className="w-20" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={sageIcon.src} alt="" className="w-20" />
         <span className="sr-only">Sage stickers</span>
       </Button>
       <Button
@@ -94,7 +99,8 @@ export const PhotostripStickers = () => {
           stickers === "justine" && "border-2 border-primary"
         )}
       >
-        <Image src={justineIcon} alt="" className="w-12" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={justineIcon.src} alt="" className="w-12" />
         <span className="sr-only">Justine stickers</span>
       </Button>
       <Button
@@ -105,7 +111,8 @@ export const PhotostripStickers = () => {
           stickers === "reyna" && "border-2 border-primary"
         )}
       >
-        <Image src={reynaIcon} alt="" className="w-16" />
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={reynaIcon.src} alt="" className="w-16" />
         <span className="sr-only">Reyna stickers</span>
       </Button>
       <Button
@@ -116,7 +123,6 @@ export const PhotostripStickers = () => {
           !stickers && "border-2 border-primary"
         )}
       >
-
         <Trash />
       </Button>
     </div>

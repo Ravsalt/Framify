@@ -11,7 +11,6 @@ import sage8 from "@/public/sage/8.png";
 import sage9 from "@/public/sage/9.png";
 import sage10 from "@/public/sage/10.png";
 
-import Image from "next/image";
 import { useImagesStore } from "@/providers/images-store-provider";
 
 export const Sage = () => {
@@ -22,40 +21,40 @@ export const Sage = () => {
   
   return (
     <div>
-      <Image src={sage1} alt="" className="absolute top-4 w-20" />
-      <Image src={sage2} alt="" className="absolute top-20 right-6 w-20" />
-      <Image src={sage3} alt="" className="absolute top-40 left-6 w-20" />
+      <img src={sage1.src} alt="" className="absolute top-4 w-20" />
+      <img src={sage2.src} alt="" className="absolute top-20 right-6 w-20" />
+      <img src={sage3.src} alt="" className="absolute top-40 left-6 w-20" />
       {!isLessThanTwoImages && (
-        <Image src={sage4} alt="" className="absolute top-60 right-6 w-20" />
+        <img src={sage4.src} alt="" className="absolute top-60 right-6 w-20" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={sage5} alt="" className="absolute top-80 left-6 w-20" />
+        <img src={sage5.src} alt="" className="absolute top-80 left-6 w-20" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={sage6} alt="" className="absolute top-96 left-32 w-20" />
+        <img src={sage6.src} alt="" className="absolute top-96 left-32 w-20" />
       )}
       {!isLessThanThreeImages && (
-        <Image
-          src={sage7}
+        <img
+          src={sage7.src}
           alt=""
           className="absolute right-6 bottom-56 w-20"
         />
       )}
       {!isLessThanThreeImages && (
-        <Image
-          src={sage8}
+        <img
+          src={sage8.src}
           alt=""
           className="absolute bottom-36 left-6 w-20"
         />
       )}
-      <Image
-        src={sage9}
+      <img
+        src={sage9.src}
         alt=""
         className="absolute right-6 bottom-18 w-20"
       />
       {!isLessThanTwoImages && (
-        <Image
-          src={sage10}
+        <img
+          src={sage10.src}
           alt=""
           className="absolute bottom-8 left-6 w-20"
         />

@@ -11,7 +11,6 @@ import reyna8 from "@/public/reyna/8.png";
 import reyna9 from "@/public/reyna/9.png";
 import reyna10 from "@/public/reyna/10.png";
 
-import Image from "next/image";
 import { useImagesStore } from "@/providers/images-store-provider";
 
 export const Reyna = () => {
@@ -22,40 +21,40 @@ export const Reyna = () => {
   
   return (
     <div>
-      <Image src={reyna1} alt="" className="absolute top-4 w-16" />
-      <Image src={reyna2} alt="" className="absolute top-20 right-6 w-16" />
-      <Image src={reyna3} alt="" className="absolute top-40 left-6 w-16" />
+      <img src={reyna1.src} alt="" className="absolute top-4 w-16" />
+      <img src={reyna2.src} alt="" className="absolute top-20 right-6 w-16" />
+      <img src={reyna3.src} alt="" className="absolute top-40 left-6 w-16" />
       {!isLessThanTwoImages && (
-        <Image src={reyna4} alt="" className="absolute top-60 right-6 w-16" />
+        <img src={reyna4.src} alt="" className="absolute top-60 right-6 w-16" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={reyna5} alt="" className="absolute top-80 left-6 w-16" />
+        <img src={reyna5.src} alt="" className="absolute top-80 left-6 w-16" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={reyna6} alt="" className="absolute top-96 left-32 w-16" />
+        <img src={reyna6.src} alt="" className="absolute top-96 left-32 w-16" />
       )}
       {!isLessThanThreeImages && (
-        <Image
-          src={reyna7}
+        <img
+          src={reyna7.src}
           alt=""
           className="absolute right-6 bottom-56 w-16"
         />
       )}
       {!isLessThanThreeImages && (
-        <Image
-          src={reyna8}
+        <img
+          src={reyna8.src}
           alt=""
           className="absolute bottom-36 left-6 w-16"
         />
       )}
-      <Image
-        src={reyna9}
+      <img
+        src={reyna9.src}
         alt=""
         className="absolute right-6 bottom-18 w-16"
       />
       {!isLessThanTwoImages && (
-        <Image
-          src={reyna10}
+        <img
+          src={reyna10.src}
           alt=""
           className="absolute bottom-8 left-6 w-16"
         />

@@ -22,40 +22,40 @@ export const Zhongli = () => {
   const isLessThanThreeImages = images.length < 3;
   return (
     <div>
-      <Image src={zhongli1} alt="" className="absolute top-4 w-16" />
-      <Image src={zhongli2} alt="" className="absolute top-20 right-6 w-16" />
-      <Image src={zhongli3} alt="" className="absolute top-40 left-6 w-16" />
+      <Image src={zhongli1.src} alt="" className="absolute top-4 w-16" />
+      <Image src={zhongli2.src} alt="" className="absolute top-20 right-6 w-16" />
+      <Image src={zhongli3.src} alt="" className="absolute top-40 left-6 w-16" />
       {!isLessThanTwoImages && (
-        <Image src={zhongli4} alt="" className="absolute top-60 right-6 w-16" />
+        <Image src={zhongli4.src} alt="" className="absolute top-60 right-6 w-16" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={zhongli5} alt="" className="absolute top-80 left-6 w-16" />
+        <Image src={zhongli5.src} alt="" className="absolute top-80 left-6 w-16" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={zhongli6} alt="" className="absolute top-96 left-32 w-16" />
+        <Image src={zhongli6.src} alt="" className="absolute top-96 left-32 w-16" />
       )}
       {!isLessThanThreeImages && (
         <Image
-          src={zhongli7}
+          src={zhongli7.src}
           alt=""
           className="absolute right-6 bottom-56 w-16"
         />
       )}
       {!isLessThanThreeImages && (
         <Image
-          src={zhongli8}
+          src={zhongli8.src}
           alt=""
           className="absolute bottom-36 left-6 w-16"
         />
       )}
       <Image
-        src={zhongli9}
+        src={zhongli9.src}
         alt=""
         className="absolute right-6 bottom-18 w-16"
       />
       {!isLessThanTwoImages && (
         <Image
-          src={zhongli10}
+          src={zhongli10.src}
           alt=""
           className="absolute bottom-8 left-6 w-16"
         />

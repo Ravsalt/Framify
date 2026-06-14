@@ -12,7 +12,6 @@ import panda8 from "@/public/panda-stickers/love.svg";
 import panda9 from "@/public/panda-stickers/mocking.svg";
 import panda10 from "@/public/panda-stickers/peace.svg";
 
-import Image from "next/image";
 
 export const PandaStickers = () => {
   const { images } = useImagesStore((store) => store);
@@ -21,31 +20,31 @@ export const PandaStickers = () => {
   const isLessThanThreeImages = images.length < 3;
   return (
     <div>
-      <Image src={panda1} alt="" className="absolute top-4 w-12" />
-      <Image src={panda2} alt="" className="absolute top-20 right-6 w-12" />
-      <Image src={panda3} alt="" className="absolute top-40 left-6 w-12" />
+      <img src={panda1.src} alt="" className="absolute top-4 w-12" />
+      <img src={panda2.src} alt="" className="absolute top-20 right-6 w-12" />
+      <img src={panda3.src} alt="" className="absolute top-40 left-6 w-12" />
       {!isLessThanTwoImages && (
-        <Image src={panda4} alt="" className="absolute top-60 right-6 w-12" />
+        <img src={panda4.src} alt="" className="absolute top-60 right-6 w-12" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={panda5} alt="" className="absolute top-80 left-6 w-12" />
+        <img src={panda5.src} alt="" className="absolute top-80 left-6 w-12" />
       )}
       {!isLessThanTwoImages && (
-        <Image src={panda6} alt="" className="absolute top-96 left-32 w-12" />
+        <img src={panda6.src} alt="" className="absolute top-96 left-32 w-12" />
       )}
       {!isLessThanThreeImages && (
-        <Image
+        <img
           src={panda7}
           alt=""
           className="absolute right-6 bottom-56 w-12"
         />
       )}
       {!isLessThanThreeImages && (
-        <Image src={panda8} alt="" className="absolute bottom-36 left-6 w-12" />
+        <img src={panda8.src} alt="" className="absolute bottom-36 left-6 w-12" />
       )}
-      <Image src={panda9} alt="" className="absolute right-6 bottom-18 w-12" />
+      <img src={panda9.src} alt="" className="absolute right-6 bottom-18 w-12" />
       {!isLessThanTwoImages && (
-        <Image src={panda10} alt="" className="absolute bottom-8 left-6 w-12" />
+        <img src={panda10.src} alt="" className="absolute bottom-8 left-6 w-12" />
       )}
     </div>
   );

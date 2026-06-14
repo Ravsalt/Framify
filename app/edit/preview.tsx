@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 import { Eye } from "lucide-react";
-import Image from "next/image";
 import { AxolotlStickers } from "./axolotl-stickers";
 import { CatStickers } from "./cat-stickers";
 import { PandaStickers } from "./panda-stickers";
@@ -65,9 +64,9 @@ export const Preview = ({
           >
             {images.slice(0, 3).map((image, index) => (
               <div key={index} className="relative h-[180px] w-[240px]">
-                <Image
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
                   src={image}
-                  fill
                   alt=""
                   className={cn(
                     "absolute mx-auto h-full w-full rounded object-cover",
